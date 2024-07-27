@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Buli - Forró éjszakák a természet ölén</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ff9900;
+            --secondary-color: #1a1a1a;
+            --text-color: #ffffff;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        header a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        
+        header ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        header li {
+            padding: 0 15px;
+        }
+        
+        header #branding h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        
+        header .highlight, header .current a {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        header a:hover {
+            color: var(--primary-color);
+        }
+        
+        #showcase {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ibb.co/fnjjvcp/20240611-094321.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+        
+        #showcase h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        
+        #showcase p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #000;
+            padding: 12px 24px;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .btn:hover {
+            background: #ffa31a;
+            transform: scale(1.05);
+        }
+        
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        #gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+        }
+        
+        #gallery img:hover {
+            transform: scale(1.05);
+            filter: brightness(0.7);
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-size: 36px;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+        
+        .sensual-text {
+            font-style: italic;
+            color: var(--primary-color);
+        }
+        
+        footer {
+            background-color: #000000;
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        @media(max-width: 768px) {
+            header #branding,
+            header nav,
+            header nav ul {
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+            
+            header {
+                padding-bottom: 20px;
+            }
+            
+            header nav ul {
+                flex-direction: column;
+            }
+            
+            header nav li {
+                padding: 10px 0;
+            }
+            
+            #showcase h1 {
+                font-size: 40px;
+            }
+            
+            #showcase p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Farm</span> Buli</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#showcase">Kezdőlap</a></li>
+                    <li><a href="#about">Rólunk</a></li>
+                    <li><a href="#services">Élmények</a></li>
+                    <li><a href="#gallery">Galéria</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Forró éjszakák a Farm Bulin</h1>
+            <p>Engedd szabadjára legvadabb fantáziáid és éld át életed legizgalmasabb kalandját a természet lágy ölén.</p>
+            <a href="#contact" class="btn">Csatlakozz a szenvedélyhez!</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Fedezd fel titkos vágyaid</h2>
+            <p>A Farm Buli egy <span class="sensual-text">exkluzív menedék</span>, ahol felfedezheted és kiélheted legmélyebb fantáziáid. Távol a hétköznapok unalmától, itt minden pillanat tele van izgalommal és szenvedéllyel.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Felejthetetlen élmények</h2>
+            <p>Kínálatunkban megtalálod az <span class="sensual-text">erotikus tematikus partikat</span>, intim összejöveteleket és olyan exkluzív eseményeket, amelyek minden érzékedet stimulálják. Diszkréció és szenvedély - ez a mi mottónk.</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">Pikáns pillanatok</h2>
+            <div id="gallery">
+                <img src="https://i.ibb.co/fnjjvcp/20240611-094321.jpg" alt="Farm buli kép 1">
+                <img src="https://i.ibb.co/L0v4mpQ/20240611-094156.jpg" alt="Farm buli kép 2">
+                <img src="https://i.ibb.co/jgkLkHn/20240611-094115.jpg" alt="Farm buli kép 3">
+                <img src="https://i.ibb.co/tMNM93M/20240611-093955.jpg" alt="Farm buli kép 4">
+                <img src="https://i.ibb.co/kQzwtzh/20240611-093941.jpg" alt="Farm buli kép 5">
+                <img src="https://i.ibb.co/1L49VvN/20240611-093858.jpg" alt="Farm buli kép 6">
+                <img src="https://i.ibb.co/rMDGc0p/20240611-093817.jpg" alt="Farm buli kép 7">
+                <img src="https://i.ibb.co/DW0DZJS/20240611-093759.jpg" alt="Farm buli kép 8">
+                <img src="https://i.ibb.co/F7qGNc1/20240611-093310.jpg" alt="Farm buli kép 9">
+                <img src="https://i.ibb.co/3hNPdzp/20240611-093307.jpg" alt="Farm buli kép 10">
+                <img src="https://i.ibb.co/q9CGYqx/20240611-093259.jpg" alt="Farm buli kép 11">
+                <img src="https://i.ibb.co/Pt4q8fq/20240611-093155.jpg" alt="Farm buli kép 12">
+                <img src="https://i.ibb.co/SxCz9GP/20240611-093143.jpg" alt="Farm buli kép 13">
+                <img src="https://i.ibb.co/DfzDsmX/20240611-093118.jpg" alt="Farm buli kép 14">
+                <img src="https://i.ibb.co/85rnFfK/20240614-173308.jpg" alt="Farm buli kép 15">
+                <img src="https://i.ibb.co/p3h32Mw/20240621-203429.jpg" alt="Farm buli kép 16">
+                <img src="https://i.ibb.co/6vjx3yd/20240711-111336.jpg" alt="Farm buli kép 17">
+                <img src="https://i.ibb.co/VN29ptV/20240711-111151.jpg" alt="Farm buli kép 18">
+                <img src="https://i.ibb.co/d2vXHXg/20240621-203647.jpg" alt="Farm buli kép 19">
+                <img src="https://i.ibb.co/HP8h9xF/20240621-203604.jpg" alt="Farm buli kép 20">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Lépj be a kísértés világába</h2>
+            <p>Készen állsz, hogy átlépd a határokat? <span class="sensual-text">Engedd, hogy bevezessünk egy olyan világba, ahol minden tiltott gyümölcs a tiéd lehet.</span></p>
+            <a href="mailto:info@farmbuli.hu" class="btn">Írj nekünk most - diszkréten!</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Farm Buli, © 2024. Minden jog fenntartva. Szigorúan csak 18 éven felülieknek.</p>
+    </footer>
+</body>
+</html>
